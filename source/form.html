@@ -6,5 +6,53 @@
 </head>
   <body>
 
+    <main class="main-page">
+      <h1>Подбор программы</h1>
+      <section class="profile">
+        <h2 class="visually-hidden">Анкета</h2>
+        <form class="profile__form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="profile__cat">
+            <legend>Заполните анкету и мы подберем программу питания для вашего кота</legend>
+            <label>Имя:*<input type="text" name="name" id="name" placeholder="Барсик"></label>
+            <label>Вес (кг):*<input type="number" name="weight" id="weight" placeholder="7"></label>
+            <label>Возраст (лет): <input type="number" name="age" id="age" placeholder="7"></label>
+          </fieldset>
+          <fieldset class="profile__program">
+            <ul>
+              <li><input type="radio" name="program" value="weight-loss" id="weight-loss" checked><label for="weight-loss">Похудение</label></li>
+              <li><input type="radio" name="program" value="weight-gain" id="weight-gain"><label for="weight-gain">Набор массы</label></li>
+              <li><input type="radio" name="program" value="advise" id="advise"><label for="advise">Не знаю(нужен ваш совет)</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="profile__person">
+            <legend>Контактные данные (владельца кота)</legend>
+            <label>E-mail:*<input type="email" placeholder="Kuklachev@gmail.com"></label>
+            <label>Телефон:*<input type="tel" placeholder="8(960)900-60-90"></label>
+          </fieldset>
+          <fieldset class="profile__about-cat">
+            <legend>Комментарий</legend>
+            <textarea name="comment" id="comment" title="Комментарий">Расскажите обо всех повадках кота
+            </textarea>
+          </fieldset>
+          <fieldset class="profile__supplements">
+            <legend>Дополнительно</legend>
+            <ul>
+              <li><input type="checkbox" name="sugar" id="sugar" checked><label for="sugar">Сахарозаменитель</label></li>
+              <li><input type="checkbox" name="water" id="water"><label for="water">Питьевая вода</label></li>
+              <li><input type="checkbox" name="milk" id="milk"><label for="milk">Молоко</label></li>
+              <li><input type="checkbox" name="vitamin" id="vitamin"><label for="vitamin">Витамины</label></li>
+            </ul>
+          </fieldset>
+          <button type="submit">Отправить заяку</button>
+        </form>
+        <small class="profile__footnote"> <sup>*</sup> - Обязательные поля</small>
+
+
+
+      </section>
+
+    </main>
+
+
   </body>
 </html>
