@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
+
   </head>
   <body>
     <header class="page-header">
@@ -16,13 +18,13 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a>Главная</a>
+                <a class="site-list__link">Главная</a>
               </li>
               <li class="site-list__item">
-                <a href="catalog.html">Каталог продукции</a>
+                <a class="site-list__link" href="catalog.html">Каталог продукции</a>
               </li>
               <li class="site-list__item">
-                <a href="form.html">Подбор программы</a>
+                <a class="site-list__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
@@ -46,12 +48,12 @@
         <h2 class="visually-hidden">Виды программ питания</h2>
         <ul class="programs__list">
           <li class="programs__item">
-            <h2 class="programs__title programs__title--thin">Похудение</h2>
-            <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лтшний вес.</p>
+            <h3 class="programs__title programs__title--thin">Похудение</h3>
+            <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programs__button button" href="catalog.html">Каталог Slim</a>
           </li>
           <li class="programs__item">
-            <h2 class="programs__title programs__title--fat">Набор массы</h2>
+            <h3 class="programs__title programs__title--fat">Набор массы</h3>
             <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="programs__button button" href="catalog.html">Каталог Pro</a>
           </li>
@@ -85,25 +87,25 @@
           <p class="example__title">Живой пример</p>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! Gри этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="data-numbers">
-            <p class="data-numbers__value">5 кг
-              <span class="data-numbers__caption">снижение веса</span>
+          <div class="example__numbers">
+            <p class="example__value">5 кг
+              <span class="example__caption">снижение веса</span>
             </p>
-            <p class="data-numbers__value">60 дней
-              <span class="data-numbers__caption">затрачено времени</span>
+            <p class="example__value">60 дней
+              <span class="example__caption">затрачено времени</span>
             </p>
           </div>
-          <p class="example-cost">Затраты на питание: 15 000 руб.</p>
+          <p class="example__cost">Затраты на питание: 15 000 руб.</p>
           <div class="example__container">
             <img class="example__image example__image--fat-cat" src="#" alt="Толстый кот">
             <img class="example__image example__image--thin-cat" src="#" alt="Худой кот">
           </div>
-          <div class="scale">
-            <span class="scale__label">Было</span>
-              <div class="scale__full">
-                <div class="scale__inner"></div>
+          <div class="example__scale">
+            <span class="example__scale-label">Было</span>
+              <div class="example__scale-full">
+                <div class="example__scale-inner"></div>
               </div>
-            <span class="scale__label">Стало</span>
+            <span class="example__scale-label">Стало</span>
           </div>
         </div>
       </section>
