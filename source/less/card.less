@@ -1,3 +1,12 @@
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__column {
+  width: 140px;
+}
+
 .card__title {
   padding: 0;
   margin: 0;
@@ -15,6 +24,7 @@
 }
 
 .card__table {
+  width: 100%;
   padding: 0;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -52,4 +62,45 @@
   line-height: 16px;
   font-weight: 400;
   color: @c-grey;
+}
+
+.card__link {
+  display: block;
+  padding: 6px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: @c-white;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    //background-color: @bc-grey;
+  }
+
+  .card__wrapper {
+    flex-direction: column;
+  }
+
+  .card__column {
+    width: 140px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__table {
+    font-size: 16px;
+  }
+
+  .card__text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

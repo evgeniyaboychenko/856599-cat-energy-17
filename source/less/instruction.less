@@ -21,19 +21,124 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .instruction__item {
   margin-bottom: 32px;
-  margin-left: 80px;
 }
 
 .instruction__item-description {
+  position: relative;
   padding: 0;
+  padding-left: 80px;
   margin: 0;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: @c-grey;
+}
+
+.instruction__item-description::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  margin-top: -30px;
+  left: 0;
+  background-color: @btnc-green;
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.instruction__item--leaf::before {
+  background-image: url("../img/advantage-leaf@1x.png");
+}
+
+.instruction__item--powder::before {
+  background-image: url("../img/advantage-powder@1x.png");
+}
+
+.instruction__item--dining::before {
+  background-image: url("../img/advantage-dining@1x.png");
+}
+
+.instruction__item--clock::before {
+  background-image: url("../img/advantage-clock@1x.png");
+}
+
+@media (min-width: @tablet-width) {
+  .instruction__wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .instruction__list {
+    //width: 708px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -218px;
+  }
+
+  .instruction__item {
+    position: relative;
+    width: 245px;
+    min-height: 228px;
+    margin-left: 218px;
+  }
+
+  .instruction__item::before {
+    position: absolute;
+    content: "1";
+    bottom: -14px;
+    right: 0;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 281.07px;
+    color: @bc-grey;
+  }
+
+  .instruction__item:nth-child(2)::before {
+    content: "2";
+  }
+
+  .instruction__item:nth-child(3)::before {
+    content: "3";
+  }
+
+  .instruction__item:nth-child(4)::before {
+    content: "4";
+  }
+
+  .instruction__item-description {
+    //width: 245px;
+    padding: 0;
+    padding-top: 117px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .instruction__item-description::before {
+    top: 30px;
+    left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .instruction__wrapper {
+    width: 1220px;
+    padding: 0 110px;
+  }
+
+  .instruction__list {
+    margin-left: -80px;
+  }
+
+  .instruction__item {
+    margin-left: 80px;
+  }
 }

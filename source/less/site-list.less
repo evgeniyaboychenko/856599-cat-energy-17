@@ -1,6 +1,7 @@
 .site-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -15,5 +16,26 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
+  text-transform: uppercase;
   color: @c-black;
+}
+
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    //width: 500px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .site-list__item {
+    border: none;
+  }
+
+  .site-list__link {
+    font-size: 18px;
+    line-height: 24.8px;
+    font-weight: 400;
+    color: #222222;
+  }
 }
