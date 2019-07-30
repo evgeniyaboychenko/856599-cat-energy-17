@@ -7,15 +7,15 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="#">
           <img class="page-header__logo-image" src="#" alt="Логотип Кэт энерджи">
-          <img class="page-header__logo-title" src="#" alt="Название Кэт энерджи">
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Раскрыть меню</button>
-          <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button" aria-label="Раскрыть меню"></button>
+          <!--<div class="main-nav__wrapper">-->
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
                 <a class="site-list__link" href="index.html">Главная</a>
@@ -27,20 +27,23 @@
                 <a class="site-list__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
-          </div>
+          <!--</div>-->
         </nav>
       </div>
     </header>
 
     <main class="page-main">
-      <div class="page-main__wrapper">
         <h1 class="page-main__title">Каталог продукции</h1>
         <section class="catalog-main">
           <div class="catalog-main__wrapper">
           <h2 class="visually-hidden">Каталог основного питания</h2>
           <ul class="catalog-main__list">
             <li class="catalog-main__item card">
+              <div class="card__wrapper">
+              <div class="card__column">
               <img class="card__image" src="#" alt="Изображение питания Cat energy pro 500 г">
+              </div>
+              <div class="card__column">
               <h3 class="card__title">Cat energy pro 500 г</h3>
               <table class="card__table">
                 <tr class="card__row">
@@ -56,7 +59,9 @@
                   <td>700 Р.</td>
                 </tr>
               </table>
+              </div>
               <a class="card__button button" href="#">Заказать</a>
+              </div>
             </li>
             <li class="catalog-main__item card">
               <img class="card__image" src="#" alt="Изображение питания Cat energy pro 1000 г">
@@ -181,8 +186,8 @@
           </div>
         </section>
         <section class="catalog-additional">
+          <h2 class="catalog-additional__title">Дополнительные товары</h2>
           <div class="catalog-additional__wrapper">
-            <h2 class="catalog-additional__title">Дополнительные товары</h2>
             <ul class="catalog-additional__list">
               <li class="catalog-additional__item card">
                 <h3 class="card__title card__title--additional">Сахарозаменитель</h3>
@@ -224,25 +229,28 @@
                 </table>
                 <a class="card__button button" href="#">Заказать</a>
               </li>
-              <li class="catalog-additional__item card">
-                <a class="catalog-additional__link" href="#">Закажите все<br> и получите чехол для кота в подарок!</a>
-              </li>
-            </ul>
+              </ul>
+            <div class="catalog-additional__all">
+                <a class="card__link" href="#">Закажите все<br> и получите чехол для кота в подарок!</a>
+            </div>
           </div>
         </section>
-      </div>
     </main>
 
     <footer class="page-footer">
       <section class="contacts">
+        <h2 class="visually-hidden">Адрес компании Кэт энерджи ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
         <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Адрес компании Кэт энерджи ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
           <p class="contacts__call">Приглашаем к сотрудничеству диллеров!</p>
-          <address class="contacts__address"> ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-          <img class="contacts__maps" src="#" alt="Карта проезда до офиса">
+          <address class="contacts__address"> ул. Большая Конюшенная, д. 19/8
+            <span>Санкт-Петербург</span></address>
         </div>
       </section>
+      <div class="page-footer__map">
+        <img class="page-footer__map-img" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта проезда до офиса">
+      </div>
       <section class="links">
+        <h2 class="visually-hidden">Социальные ссылки</h2>
         <div class="links__wrapper">
           <a class="links__logo" href="#">
             <img class="links__logo-title" src="#" alt="Название Кэт энерджи">
@@ -260,10 +268,12 @@
               </li>
             </ul>
           </div>
-          <a class="links__developers developers" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="developers__logo-title" src="#" alt="HTML Academy">
-            <img class="developers__logo-image" src="#" alt="Логотип комапнии HTML Academy">
-          </a>
+          <div class="links__developer developer">
+            <p class="developer__name">HTML Academy</p>
+            <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="developer__logo-image" src="#" alt="Логотип комапнии HTML Academy">
+            </a>
+          </div>
         </div>
       </section>
     </footer>

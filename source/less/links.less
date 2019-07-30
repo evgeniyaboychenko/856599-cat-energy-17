@@ -1,4 +1,39 @@
 .links {
+  background-color: @bc-grey;
+}
+
+.links__wrapper {
   width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.links__social {
+  width: 125px;
+}
+
+.links__developer {
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .links__wrapper {
+    width: 708px;
+    padding: 0 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .links__developer {
+    width: 162px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .links__wrapper {
+    width: 1220px;
+    padding: 0 40px;
+  }
 }

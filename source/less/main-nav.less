@@ -1,9 +1,30 @@
 .main-nav {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  width: 280px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.main-nav__wrapper {
-  //display: none;
+.main-nav__toggle {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  right: 20px;
+  top: -40px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    border: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }
