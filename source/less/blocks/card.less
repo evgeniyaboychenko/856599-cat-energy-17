@@ -1,0 +1,281 @@
+.card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.card__column {
+  width: 140px;
+  //line-height: 0;
+}
+
+.card__image {
+  width: 140px;
+  height: 144px;
+}
+
+.card__title {
+  width: 75px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 21px;
+  margin-bottom: 10px;
+}
+
+.card__title--additional {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 13px;
+  margin-left: 1px;
+  margin-bottom: 12px;
+  line-height: 16px;
+  color: @c-catalog-title;
+}
+
+.card__table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: @c-grey;
+  //border: 1px solid red;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  //border: 1px solid red;
+}
+
+.card__row td {
+  //border: 1px solid red;
+}
+
+.card__table--additional {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.card__button {
+  margin-bottom: 24px;
+}
+
+.card__button--additional {
+  margin-bottom: 17px;
+}
+
+.card__text {
+  padding: 0;
+  margin: 0;
+  margin-top: 11px;
+  margin-bottom: 22px;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: @c-grey;
+}
+
+.card__link {
+  position: relative;
+  width: 162px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 6px;
+  padding-top: 128px;
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: @c-white;
+  cursor: pointer;
+}
+
+.card__link::after {
+  position: absolute;
+  content: "";
+  width: 55px;
+  height: 60px;
+  top: 5px;
+  left: 50%;
+  margin-left: -27px;
+  background-image: url("../../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(1);
+}
+
+.card__title--all {
+  margin-top: 80px;
+  margin-bottom: 7px;
+  text-align: center;
+  width: 210px;
+}
+
+.card__text--all {
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.card__button--all {
+  width: 100%;
+  color: @c-grey;
+  background-color: @bc-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    //background-color: @bc-grey;
+  }
+
+  .card__wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+
+  .card__column {
+    width: 249px;
+  }
+
+  .card__title {
+    width: 140px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card__title--all {
+    margin-top: 165px;
+    margin-bottom: 26px;
+    width: 170px;
+  }
+
+  .card__title--additional {
+    width: 140px;
+    line-height: 20px;
+    text-align: left;
+    margin: 0;
+    margin-right: auto;
+  }
+
+
+  .card__table {
+    font-size: 16px;
+  }
+
+  .card__row {
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  .card__table--additional {
+    width: 225px;
+    margin-bottom: 16px;
+  }
+
+  .card__table--additional .card__row {
+    border: none;
+  }
+
+  .card__table--additional .card__row td {
+    //text-align: right;
+  }
+
+  .card__text {
+    width: 180px;
+    margin-bottom: 86px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .card__image {
+    width: 161px;
+    height: 172px;
+    margin-top: -40px;
+    margin-bottom: 33px;
+  }
+
+  .card__image--big {
+    width: 195px;
+    height: 208px;
+    margin-top: -76px;
+  }
+
+  .card__button {
+    width: 249px;
+    margin: 0 auto;
+    margin-bottom: 39px;
+  }
+
+  .card__button--additional {
+    width: 630px;
+    margin-bottom: 0;
+  }
+
+  .card__link {
+    padding: 10px 0;
+    padding-left: 342px;
+    text-align: left;
+    margin-top: 61px;
+    margin-right: 123px;
+  }
+
+  .card__link::after {
+    top: 4px;
+    left: 10px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card__column {
+    width: 170px;
+  }
+
+  .card__button {
+    width: 169px;
+  }
+
+  .card__table--additional {
+    width: 284px;
+    margin-bottom: 0;
+    margin-right: 39px;
+  }
+
+  .card__button--additional {
+    width: 245px;
+    margin: 0;
+  }
+
+  .card__link {
+    width: 162px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 6px;
+    padding-top: 128px;
+    text-align: center;
+  }
+
+  .card__link::after {
+    top: 5px;
+    left: 50%;
+    margin-left: -27px;
+  }
+}

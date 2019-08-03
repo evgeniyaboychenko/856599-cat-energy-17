@@ -1,6 +1,6 @@
 .catalog-additional {
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .catalog-additional__wrapper {
@@ -15,7 +15,7 @@
   width: 280px;
   padding: 0 20px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -39,12 +39,12 @@
 .catalog-additional__all {
   border: none;
   margin-top: 39px;
-  margin-bottom: 35px;
+  //margin-bottom: 35px;
   min-height: 289px;
-  padding-left: 55px;
-  padding-right: 55px;
+  //padding-left: 55px;
+  //padding-right: 55px;
   background-color: @bc-green;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -87,6 +87,7 @@
     margin: 0 auto;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 80px;
   }
 
   .catalog-additional__wrapper {
@@ -94,26 +95,37 @@
     padding: 0 30px;
   }
 
+  .catalog-additional__list {
+    margin-bottom: 31px;
+  }
+
   .catalog-additional__item {
     padding: 27px 38px;
     border: 1px solid rgba(205, 205, 205, 0.5);
     border-bottom: none;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .catalog-additional__item:last-child {
     border-bottom: 1px solid rgba(205, 205, 205, 0.5);
   }
+
+  .catalog-additional__all {
+    min-height: 198px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-additional {
-    margin-bottom: 86px;
+    margin-bottom: 84px;
   }
 
   .catalog-additional__title {
     width: 1220px;
     padding: 0 40px;
     margin: 0 auto;
+    margin-bottom: 80px;
   }
 
   .catalog-additional__wrapper {
@@ -125,15 +137,26 @@
   .catalog-additional__list {
     width: 895px;
     margin-right: 80px;
+    margin-bottom: 0;
   }
 
   .catalog-additional__item {
-    padding: 16px 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
     border: none;
     border-top: 1px solid rgb(205, 205, 205);
+    justify-content: space-between;
+    align-items: center;
   }
 
   .catalog-additional__item:last-child {
     border-bottom: 1px solid rgb(205, 205, 205);
+  }
+
+  .catalog-additional__all {
+    width: 245px;
+    margin: 0;
   }
 }

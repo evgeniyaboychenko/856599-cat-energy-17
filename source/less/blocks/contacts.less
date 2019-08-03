@@ -1,7 +1,11 @@
 .contacts {
   position: relative;
+
+}
+.contacts--background {
   background-color: white;
 }
+
 
 .contacts__wrapper {
   width: 280px;
@@ -30,6 +34,7 @@
   width: 135px;
   padding: 0;
   margin: 0;
+  margin-right: 4px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -44,15 +49,16 @@
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    width: 625px;
-    padding-top: 66px;
-    padding-bottom: 59px;
-    padding-left: 71px;
-    padding-right: 72px;
+    width: 628px;
+    padding-top: 65px;
+    padding-bottom: 58px;
+    padding-left: 72px;
+    padding-right: 68px;
   }
 
   .contacts__call {
     width: 155px;
+    padding: 2px 0;
     font-size: 20px;
     line-height: 25px;
   }
@@ -79,5 +85,6 @@
 
   .contacts__address {
     text-align: left;
+    margin-right: 0px;
   }
 }

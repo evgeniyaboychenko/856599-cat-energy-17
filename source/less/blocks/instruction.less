@@ -1,5 +1,5 @@
 .instruction {
-  width: 100%;
+  margin-bottom: 23px;
 }
 
 .instruction__wrapper {
@@ -11,7 +11,7 @@
 .instruction__title {
   padding: 0;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -26,12 +26,14 @@
 }
 
 .instruction__item {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .instruction__item-description {
   position: relative;
   padding: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
   padding-left: 80px;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -56,50 +58,66 @@
 }
 
 .instruction__item--leaf::before {
-  background-image: url("../img/advantage-leaf@1x.png");
+  background-image: url("../../img/advantage-leaf@1x.png");
 }
 
 .instruction__item--powder::before {
-  background-image: url("../img/advantage-powder@1x.png");
+  background-image: url("../../img/advantage-powder@1x.png");
 }
 
 .instruction__item--dining::before {
-  background-image: url("../img/advantage-dining@1x.png");
+  background-image: url("../../img/advantage-dining@1x.png");
 }
 
 .instruction__item--clock::before {
-  background-image: url("../img/advantage-clock@1x.png");
+  background-image: url("../../img/advantage-clock@1x.png");
 }
 
 @media (min-width: @tablet-width) {
+  .instruction {
+    margin-bottom: 43px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   .instruction__wrapper {
     width: 708px;
     padding: 0 30px;
   }
 
+  .instruction__title {
+    font-size: 60px;
+    margin-bottom: 67px;
+  }
+
   .instruction__list {
-    //width: 708px;
+    width: auto;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: -218px;
+    margin-left: -139px;
   }
 
   .instruction__item {
     position: relative;
     width: 245px;
-    min-height: 228px;
-    margin-left: 218px;
+    min-height: 235px;
+    margin-left: 139px;
+    margin-bottom: 82px;
   }
 
   .instruction__item::before {
     position: absolute;
     content: "1";
-    bottom: -14px;
-    right: 0;
+    top: -35px;
+    left: 113px;
     font-size: 281px;
     font-weight: 400;
     line-height: 281.07px;
-    color: @bc-grey;
+    color: green;
+    //color: @bc-grey;
+  }
+
+  .instruction__item:nth-child(1)::before {
+    left: 118px;
   }
 
   .instruction__item:nth-child(2)::before {
@@ -114,6 +132,11 @@
     content: "4";
   }
 
+  .instruction__item:last-child,
+  .instruction__item:nth-last-child(2) {
+    margin-bottom: 56px;
+  }
+
   .instruction__item-description {
     //width: 245px;
     padding: 0;
@@ -123,12 +146,19 @@
   }
 
   .instruction__item-description::before {
-    top: 30px;
+    width: 80px;
+    height: 80px;
+    top: 35px;
     left: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .instruction {
+    margin-bottom: 24px;
+    border: none;
+  }
+
   .instruction__wrapper {
     width: 1220px;
     padding: 0 40px;
@@ -140,5 +170,6 @@
 
   .instruction__item {
     margin-left: 80px;
+    margin-bottom: 30px;
   }
 }
