@@ -19,65 +19,68 @@
 }
 
 .programs__item {
-  margin-bottom: 20px;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 20px;
+  position: relative;
+  margin-bottom: 17px;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  padding-left: 19px;
   padding-right: 20px;
   background-color: @bc-grey;
+  //background-color: red;
 }
 
 .programs__title {
-  position: relative;
   padding: 0;
   padding-left: 72px;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 29px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.programs__title::before {
+.programs__item::before {
   position: absolute;
   content: "";
-  top: 50%;
-  left: 0;
-  margin-top: -25px;
+  top: 25px;
+  left: 22px;
   width: 50px;
-  height: 51px;
-  background-color: @btnc-green;
+  height: 50px;
+  background-color: #68b738;
   border-radius: 50%;
 }
 
-.programs__title::after {
+.programs__item::after {
   position: absolute;
   content: "";
-  top: 50%;
-  left: 9px;
+  top: 22px;
+  left: 31px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.programs__title--thin::after {
+.programs__item--thin::after {
   width: 35px;
   height: 49px;
-  margin-top: -26px;
-  background-image: url("../img/icon-cat-slim.svg");
+  background-image: url("../../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.programs__title--fat::after {
+.programs__item--fat::after {
   width: 67px;
   height: 28px;
-  left: -9px;
-  margin-top: -14px;
-  background-image: url("../img/icon-cat-pro.svg");
+  top: 36px;
+  left: 13px;
+  background-image: url("../../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .programs__description {
   padding: 0;
-  padding-bottom: 15px;
+  padding-bottom: 22px;
   margin: 0;
   margin-bottom: 15px;
   font-family: "Arial", sans-serif;
@@ -91,7 +94,7 @@
 .programs__button {
   display: block;
   margin: 0;
-  padding: 5px 5px;
+  padding: 5px 0;
   text-align: left;
   font-size: 16px;
   line-height: 16px;
@@ -102,6 +105,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .programs {
+    margin-bottom: 14px;
+  }
+
   .programs__wrapper {
     width: 708px;
     padding: 0 30px;
@@ -111,47 +118,66 @@
     box-sizing: border-box;
     width: 708px;
 
-    padding-top: 81px;
-    padding-bottom: 62px;
+    padding-top: 75px;
+    padding-bottom: 57px;
     padding-left: 52px;
-    padding-right: 285px;
+    padding-right: 275px;
+    margin-bottom: 31px;
   }
+
+  .programs__item--fat {
+    padding-right: 312px;
+  }
+
 
   .programs__title {
     padding-left: 0;
+    margin-bottom: 25px;
     font-size: 36px;
   }
 
   .programs__description {
+    margin-bottom: 29px;
     border: none;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  .programs__title::before {
-    top: 14px;
-    left: 400px;
+  .programs__item::before {
+    top: 91px;
+    left: 446px;
     width: 200px;
     height: 200px;
   }
 
-  .programs__title::after {
-    top: 0;
-    left: 425px;
+  .programs__item::after {
+    top: 79px;
+    left: 476px;
   }
 
-  .programs__title--thin::after {
+  .programs__item--thin::after {
     width: 140px;
     height: 194px;
   }
 
-  .programs__title--fat::after {
-    top: 57px;
-    left: 360px;
+  .programs__item--fat::after {
+    top: 135px;
+    left: 412px;
     width: 268px;
     height: 112px;
+  }
+
+  .programs__button {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .programs {
+    margin-bottom: 42px;
+  }
+
   .programs__wrapper {
     width: 1220px;
     padding: 0 40px;
@@ -165,45 +191,47 @@
   .programs__item {
     box-sizing: border-box;
     width: 570px;
-    margin-left: 80px;
-    padding-top: 81px;
-    padding-bottom: 62px;
+    padding-top: 75px;
+    padding-bottom: 57px;
     padding-left: 52px;
+    //padding-right: 275px;
+    margin-bottom: 31px;
+    margin-left: 80px;
     padding-right: 56px;
   }
 
   .programs__item:first-child {
-    margin-right: 80px;
+    //margin-right: 80px;
   }
 
   .programs__title {
     padding-left: 164px;
     font-size: 36px;
+    margin-bottom: 75px;
   }
 
-  .programs__title::before {
-    top: 50%;
-    left: 0;
-    margin-top: -50px;
+  .programs__description {
+    margin-bottom: 4px;
+  }
+
+  .programs__item::before {
+    top: 47px;
+    left: 52px;
     width: 100px;
     height: 100px;
   }
 
-  .programs__title::after {
-    top: 50%;
-  }
-
-  .programs__title--thin::after {
+  .programs__item--thin::after {
     width: 70px;
     height: 97px;
-    left: 20px;
-    margin-top: -54px;
+    left: 66px;
+    top: 40px;
   }
 
-  .programs__title--fat::after {
+  .programs__item--fat::after {
     width: 134px;
     height: 56px;
-    left: -20px;
-    margin-top: -28px;
+    left: 35px;
+    top: 69px;
   }
 }

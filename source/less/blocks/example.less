@@ -1,6 +1,7 @@
 .example {
-  padding-bottom: 38px;
-  background-image: linear-gradient(to bottom, white 0%, @bc-grey 0%, @bc-grey 100%);
+  padding-bottom: 34px;
+  //background-image: linear-gradient(to bottom, white 0%, @bc-grey 0%, @bc-grey 100%);
+  background-color: red;
 }
 
 .example__wrapper {
@@ -12,13 +13,15 @@
 .example__info {
   width: 280px;
   padding: 0 20px;
+  padding-top: 17px;
+  padding-bottom: 20px;
   margin: 0 auto;
 }
 
 .example__title {
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -28,7 +31,7 @@
   width: 266px;
   padding: 0;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -44,7 +47,7 @@
 .example__numbers {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .example__value {
@@ -69,8 +72,8 @@
   box-sizing: border-box;
   text-align: center;
   z-index: 2;
-  top: 42px;
-  right: 19px;
+  top: 48px;
+  right: 21px;
   padding: 0;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -112,8 +115,8 @@
 
 .example__scale-full {
   position: relative;
-  width: 84px;
-  height: 14px;
+  width: 82px;
+  height: 12px;
   border-radius: 6px;
   border: 1px solid #cdcdcd;
   background-color: #ffffff;
@@ -121,7 +124,8 @@
 
 .example__scale-inner {
   position: absolute;
-  top: 4px;
+  top: 50%;
+  margin-top: -3px;
   left: 4px;
   width: 35px;
   height: 6px;
@@ -135,15 +139,17 @@
   align-items: center;
 }
 
-.example__photo {
-  width: 311px;
-  height: 232px;
+.example__photos {
+  width: 320px;
+  height: 240px;
   background-color: yellow;
+  margin-bottom: 46px;
 }
 
 @media (min-width: @tablet-width) {
   .example {
     background-image: linear-gradient(to bottom, white 55%, @bc-grey 55%, @bc-grey 100%);
+    padding-bottom: 67px;
   }
 
   .example__wrapper {
@@ -156,46 +162,65 @@
   }
 
   .example__title {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
     font-size: 60px;
   }
 
   .example__text {
     width: 676px;
-    margin-bottom: 56px;
+    margin-bottom: 52px;
     font-size: 16px;
     line-height: 24px;
   }
 
+
   .example__container-stat {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .example__cost {
     width: 174px;
     text-align: right;
     font-size: 20px;
-    line-height: 20px;
+    //flex-direction: column;
+    //display: flex;
+  }
+
+  .example__cost span {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  .example__cost span:last-child {
+    margin-bottom: 0;
   }
 
   .example__numbers {
     width: 366px;
+    margin-bottom: 0;
   }
 
   .example__value {
     width: 162px;
+    padding: 17px 5px;
+    padding-top: 16px;
     font-size: 30px;
     line-height: 37px;
   }
 
   .example__caption {
     width: 142px;
-    top: 58px;
+    top: 63px;
     right: 10px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @c-white;
   }
 
-  .example__photo {
+  .example__photos {
     //width: 677px;
     //height: 499px;
   }
@@ -206,18 +231,21 @@
 
   .example__scale-label {
     font-size: 20px;
+    padding: 5px 0;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
   }
 
   .example__scale-full {
     width: 428px;
     height: 6px;
     border-radius: 3px;
+    border: none;
     background-color: #dcdcdc;
   }
 
   .example__scale-inner {
     top: -14px;
-    left: 214px;
+    left: 198px;
     width: 34px;
     height: 34px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -241,6 +269,7 @@
 @media (min-width: @desktop-width) {
   .example {
     background-image: linear-gradient(to bottom, white 22%, @bc-grey 22%, @bc-grey 100%);
+    padding-bottom: 44px;
   }
 
   .example__wrapper {
@@ -252,25 +281,45 @@
 
   .example__info {
     //width: 1220px;
-    //padding: 0 40px;
+    padding: 0;
   }
 
   .example__title {
-    margin-bottom: 66px;
+    margin-bottom: 146px;
   }
 
   .example__text {
     width: 432px;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
+  }
+
+  .example__caption {
+    background-color: @bc-grey;
+  }
+
+  .example__numbers {
+    margin-bottom: 60px;
   }
 
   .example__container-stat {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .example__cost {
     width: 326px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+  }
+
+  .example__container-photo {
+    align-items: flex-end;
+  }
+
+  .example__photos {
+    width: 677px;
+    height: 499px;
+    margin-bottom: 0;
   }
 }
