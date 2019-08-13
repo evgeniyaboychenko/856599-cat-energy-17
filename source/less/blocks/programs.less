@@ -92,6 +92,7 @@
 }
 
 .programs__button {
+  position: relative;
   display: block;
   margin: 0;
   padding: 5px 0;
@@ -102,6 +103,23 @@
   text-transform: uppercase;
   color: @c-black;
   //border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    margin-top: -6px;
+    left: 98px;
+    width: 24px;
+    height: 11px;
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.programs__button--arrow::after {
+  left: 96px;
 }
 
 @media (min-width: @tablet-width) {
@@ -170,6 +188,14 @@
   .programs__button {
     font-size: 20px;
     line-height: 20px;
+
+    &::after {
+      left: 132px;
+    }
+  }
+
+  .programs__button--arrow::after {
+    left: 126px;
   }
 }
 
