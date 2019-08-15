@@ -47,6 +47,11 @@
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px auto;
+  }
 }
 //--------------------------------------
 
@@ -113,6 +118,12 @@
 
   .catalog-additional__all {
     min-height: 198px;
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/gift-photo-tablet@2x.jpg");
+      background-size: 708px auto;
+    }
   }
 }
 
@@ -158,5 +169,11 @@
   .catalog-additional__all {
     width: 245px;
     margin: 0;
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
+      background-size: 245px auto;
+    }
   }
 }

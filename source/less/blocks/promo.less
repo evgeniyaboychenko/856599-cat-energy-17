@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-position: center top, center top;
   background-size: 320px auto, auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../../img/index-background-mobile@2x.jpg"), linear-gradient(to bottom, @bc-green 64%, white 64%);
+  }
 }
 
 .promo__wrapper {
@@ -143,9 +147,9 @@
   .promo__image {
     width: 552px;
     height: 499px;
-    top: 0;
+    top: -81px;
     left: 50%;
-    margin-left: -157px;
+    margin-left: -159px;
     z-index: -1;
   }
 
