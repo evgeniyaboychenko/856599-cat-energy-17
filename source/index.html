@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
     <header class="page-header page-header--background-cat">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="#">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Кэт энерджи">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button" aria-label="Раскрыть меню"></button>
@@ -37,7 +42,11 @@
         <div class="promo__wrapper">
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Изображение питания для котов">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Изображение питания для котов">
+          </picture>
           <a class="promo__button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -122,17 +131,19 @@
     </main>
 
     <footer class="page-footer">
-      <section class="contacts contacts--background">
+      <section class="location">
         <h2 class="visually-hidden">Адрес компании Кэт энерджи ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</h2>
-        <div class="contacts__wrapper">
-          <p class="contacts__call">Приглашаем<br>к сотрудничеству дилеров!</p>
-          <address class="contacts__address"> ул. Большая Конюшенная, д. 19/8
-            <span>Санкт-Петербург</span></address>
+        <div class="location__contacts location__contacts--background">
+          <div class="location__wrapper">
+            <p class="location__call">Приглашаем<br>к сотрудничеству дилеров!</p>
+            <address class="location__address"> ул. Большая Конюшенная, д. 19/8
+              <span>Санкт-Петербург</span>
+            </address>
+          </div>
         </div>
+        <div class="location__map" aria-label="Карта проезда до офиса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></div>
       </section>
-      <div class="page-footer__map">
-        <img class="page-footer__map-img" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта проезда до офиса">
-      </div>
+
       <section class="links">
         <h2 class="visually-hidden">Социальные ссылки</h2>
         <div class="links__wrapper">

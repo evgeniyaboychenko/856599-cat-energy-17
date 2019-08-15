@@ -118,6 +118,18 @@
   }
 }
 
+.programs__button:hover,
+.programs__button:focus {
+  &::after {
+    width: 33px;
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+  }
+}
+
+.programs__button:active {
+  opacity: 0.3;
+}
+
 .programs__button--arrow::after {
   left: 96px;
 }

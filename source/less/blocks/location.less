@@ -1,0 +1,165 @@
+.location__map {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 320px;
+  height: 362px;
+  background-color: @bc-grey;
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+    background-image: url("../../img/bg-map-mobile@2x.png");
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    margin-top: -46px;
+    margin-left: -34px;
+    z-index: 3;
+    width: 67px;
+    height: 60px;
+    background-image: url("../../img/map-pin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 64px auto;
+  }
+}
+
+.location__contacts--background {
+  background-color: white;
+}
+
+.location__wrapper {
+  width: 280px;
+  padding-top: 31px;
+  padding-bottom: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location__call {
+  width: 125px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @c-black;
+  text-align: left;
+}
+
+.location__address {
+  width: 135px;
+  padding: 0;
+  margin: 0;
+  margin-right: 4px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @c-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+@media (min-width: @tablet-width) {
+  .location__wrapper {
+    width: 628px;
+    padding-top: 65px;
+    padding-bottom: 58px;
+    padding-left: 72px;
+    padding-right: 68px;
+  }
+
+  .location__call {
+    width: 155px;
+    padding: 2px 0;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .location__address {
+    width: 155px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .location__map {
+    width: 768px;
+    height: 396px;
+    margin-bottom: 54px;
+    background-image: url("../../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+      background-image: url("../../img/bg-map-tablet@2x.png");
+    }
+
+    &::after {
+      width: 124px;
+      height: 106px;
+      margin-top: -52px;
+      margin-left: -62px;
+      background-size: 124px auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .location {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+  }
+
+  .location__contacts {
+    position: absolute;
+    z-index: 5;
+    top: 93px;
+    right: 50%;
+    margin-right: 40px;
+  }
+
+  .location__wrapper {
+    background-color: white;
+    width: 404px;
+    padding-top: 66px;
+    padding-bottom: 59px;
+    padding-left: 76px;
+    padding-right: 90px;
+  }
+
+  .location__address {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .location__map {
+    width: 1440px;
+    height: 400px;
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    background-size: 1440px auto;
+
+    @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+      background-image: url("../../img/bg-map-desktop@2x.png");
+    }
+
+    &::after {
+      margin-top: -50px;
+      margin-left: 278px;
+    }
+  }
+}
