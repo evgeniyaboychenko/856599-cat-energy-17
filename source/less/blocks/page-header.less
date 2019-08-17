@@ -34,6 +34,15 @@
     width: 173px;
     margin-left: 0;
     padding: 26px 0;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .page-header__logo-image {
@@ -56,24 +65,24 @@
 
   .page-header--background-cat {
     margin-bottom: 81px;
-  }
 
-  .page-header--background-cat::after {
-    position: absolute;
-    content: "";
-    z-index: -2;
-    width: 50%;
-    height: 696px;
-    top: 0;
-    left: 50%;
-    background-color: @bc-green;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: -2;
+      width: 50%;
+      height: 696px;
+      top: 0;
+      left: 50%;
+      background-color: @bc-green;
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/index-background-desktop@2x.jpg");
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 

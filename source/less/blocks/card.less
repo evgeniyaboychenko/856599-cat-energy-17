@@ -54,11 +54,6 @@
 .card__row {
   display: flex;
   justify-content: space-between;
-  //border: 1px solid red;
-}
-
-.card__row td {
-  //border: 1px solid red;
 }
 
 .card__table--additional {
@@ -102,20 +97,20 @@
   text-align: center;
   color: @c-white;
   cursor: pointer;
-}
 
-.card__link::after {
-  position: absolute;
-  content: "";
-  width: 55px;
-  height: 60px;
-  top: 5px;
-  left: 50%;
-  margin-left: -27px;
-  background-image: url("../../img/icon-gift.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: invert(1);
+  &::after {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 60px;
+    top: 5px;
+    left: 50%;
+    margin-left: -27px;
+    background-image: url("../../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+  }
 }
 
 .card__title--all {
@@ -132,8 +127,8 @@
 
 .card__button--all {
   width: 100%;
-  color: @c-grey;
-  background-color: @bc-grey;
+  //color: @c-grey;
+  //background-color: @bc-grey;
 }
 
 @media (min-width: @tablet-width) {
@@ -184,8 +179,14 @@
     padding-top: 6px;
   }
 
+  .card__row--additional {
+    //padding-top: 2px;
+    //padding-bottom: 3px;
+    justify-content: flex-end;
+  }
+
   .card__table--additional {
-    width: 225px;
+    width: 232px;
     margin-bottom: 16px;
   }
 
@@ -193,8 +194,9 @@
     border: none;
   }
 
-  .card__table--additional .card__row td {
-    //text-align: right;
+  .card__td {
+    width: 92px;
+    text-align: right;
   }
 
   .card__text {
@@ -225,7 +227,7 @@
   }
 
   .card__button--additional {
-    width: 630px;
+    width: 632px;
     margin-bottom: 0;
   }
 
@@ -235,12 +237,12 @@
     text-align: left;
     margin-top: 61px;
     margin-right: 123px;
-  }
 
-  .card__link::after {
-    top: 4px;
-    left: 10px;
-    margin-left: 0;
+    &::after {
+      top: 4px;
+      left: 10px;
+      margin-left: 0;
+    }
   }
 }
 
@@ -262,6 +264,10 @@
     width: 170px;
   }
 
+  .card__row--additional {
+    justify-content: space-between;
+  }
+
   .card__button {
     width: 169px;
   }
@@ -271,6 +277,7 @@
     margin-bottom: 0;
     margin-right: 39px;
   }
+
 
   .card__button--additional {
     width: 245px;
@@ -284,11 +291,11 @@
     padding: 6px;
     padding-top: 128px;
     text-align: center;
-  }
 
-  .card__link::after {
-    top: 5px;
-    left: 50%;
-    margin-left: -27px;
+    &::after {
+      top: 5px;
+      left: 50%;
+      margin-left: -27px;
+    }
   }
 }

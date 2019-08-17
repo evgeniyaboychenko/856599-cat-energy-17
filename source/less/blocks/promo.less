@@ -63,6 +63,16 @@
   text-transform: uppercase;
   color: @c-white;
   background-color: @btnc-green;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
 }
 
 @media (min-width: @tablet-width) {

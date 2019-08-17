@@ -24,17 +24,16 @@
   width: 128px;
   height: 24px;
   margin-bottom: 29px;
-}
 
-.links__logo :hover,
-.links__logo :focus {
-  opacity: 0.8;
-}
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 
-.links__logo :active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
-
 
 .links__developer-name {
   padding: 0;
@@ -52,25 +51,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.links__developer-link svg {
   margin-right: -7px;
-}
-
-.links__developer-link svg path {
   fill: #666666;
-}
 
-.links__developer-link:hover svg path,
-.developer__link:focus svg path {
-  fill: #68b738;
-}
+  &:hover,
+  &:focus {
+    fill: #68b738;
+  }
 
-.links__developer-link:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
-
 
 @media (min-width: @tablet-width) {
   .links__wrapper {

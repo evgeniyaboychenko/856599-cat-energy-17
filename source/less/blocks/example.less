@@ -133,6 +133,7 @@
   height: 6px;
   border-radius: 3px;
   background-color: #68b738;
+  cursor: pointer;
 }
 
 .example__container-photo {
@@ -256,10 +257,10 @@
   .example__cost span {
     display: block;
     margin-bottom: 9px;
-  }
 
-  .example__cost span:last-child {
-    margin-bottom: 0;
+    & span:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .example__numbers {
@@ -298,8 +299,9 @@
   }
 
   .example__img--fat-cat {
-    width: 345px;
+    width: 339px;
     height: 517px;
+    left: 7px;
     background-color: transparent;
     background-image: url("../../img/before-tablet@1x.png");
 
@@ -309,8 +311,9 @@
   }
 
   .example__img--thin-cat {
-    width: 345px;
+    width: 351px;
     height: 517px;
+    right: -7px;
     background-color: transparent;
     background-image: url("../../img/after-tablet@1x.png");
 
@@ -329,6 +332,16 @@
     font-size: 20px;
     padding: 5px 0;
     border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
   }
 
   .example__scale-full {
@@ -348,17 +361,27 @@
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     background-color: @c-white;
-  }
 
-  .example__scale-inner::after {
-    position: absolute;
-    content: "";
-    top: 13px;
-    left: 13px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #68b738;
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+      border: 2px solid #68b738;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 13px;
+      left: 13px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #68b738;
+    }
   }
 }
 
@@ -427,7 +450,9 @@
   }
 
   .example__img--fat-cat {
-    width: 363px;
+    width: 365px;
+    top: 2px;
+    left: 41px;
     background-color: transparent;
     background-image: url("../../img/before-desktop@1x.png");
 
@@ -437,7 +462,9 @@
   }
 
   .example__img--thin-cat {
-    width: 327px;
+    width: 325px;
+    top: 2px;
+    right: -41px;
     background-color: transparent;
     background-image: url("../../img/after-desktop@1x.png");
 
