@@ -1,15 +1,8 @@
 .page-main {
-  //width: 320px;
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
-}
-
-.page-main__wrapper {
-  //width: 280px;
-  //padding: 0 20px;
-  //margin: 0 auto;
 }
 
 .page-main__title {
@@ -22,6 +15,15 @@
   line-height: 60px;
   font-weight: 400;
   color: @c-black;
+
+  &--catalog {
+    margin-top: 16px;
+    margin-bottom: 27px;
+  }
+
+  &--form {
+    margin-top: 14px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -31,10 +33,10 @@
     margin: 0 auto;
     font-size: 60px;
     margin-bottom: 164px;
-  }
 
-  .page-main__title--form {
-    margin-bottom: 55px;
+    &--form {
+      margin-bottom: 55px;
+    }
   }
 }
 
@@ -44,9 +46,15 @@
     padding: 0 40px;
     margin: 0 auto;
     margin-bottom: 165px;
+
+    &--catalog {
+      margin-top: 18px;
+    }
+
+    &--form {
+      margin-top: 18px;
+      margin-bottom: 56px;
+    }
   }
 
-  .page-main__title--form {
-    margin-bottom: 56px;
-  }
 }

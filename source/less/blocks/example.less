@@ -1,6 +1,4 @@
 .example {
-  //padding-bottom: 34px;
-  //background-image: linear-gradient(to bottom, white 0%, @bc-grey 0%, @bc-grey 100%);
   background-color: @bc-grey;
 }
 
@@ -129,7 +127,7 @@
   top: 50%;
   margin-top: -3px;
   left: 4px;
-  width: 35px;
+  width: 36px;
   height: 6px;
   border-radius: 3px;
   background-color: #68b738;
@@ -140,15 +138,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 32px;
+  padding-bottom: 33px;
 }
 
 .example__photos {
   position: relative;
   width: 320px;
   height: 240px;
-  //background-color: yellow;
-  //background-color: @bc-grey;
   margin-bottom: 32px;
 }
 
@@ -188,32 +184,12 @@
   }
 }
 
-//.example__image--fat-cat {
-//  position: absolute;
-//  z-index: 50;
-//  top: 0;
-//  left: 0;
-//  width: 100%;
-//  height: 100%;
-//}
-//
-//.example__image--thin-cat {
-//  position: absolute;
-//  z-index: 20;
-//  top: 0;
-//  left: 0;
-//  width: 50%;
-//  height: 100%;
-//}
-
 @media (min-width: @tablet-width) {
   .example {
     background-color: @c-white;
     background-position: 0 575px;
     background-image: linear-gradient(to right, @bc-grey 50%, #eaeaea 50%);
     background-repeat: no-repeat;
-    //background-image: linear-gradient(to bottom, white 55%, @bc-grey 55%, @bc-grey 100%);
-    //padding-bottom: 67px;
   }
 
   .example__wrapper {
@@ -238,7 +214,6 @@
     line-height: 24px;
   }
 
-
   .example__container-stat {
     flex-direction: row;
     justify-content: space-between;
@@ -248,10 +223,9 @@
 
   .example__cost {
     width: 174px;
-    text-align: right;
+    padding-top: 11px;
     font-size: 20px;
-    //flex-direction: column;
-    //display: flex;
+    text-align: right;
   }
 
   .example__cost span {
@@ -322,7 +296,6 @@
     }
   }
 
-
   .example__scale {
     width: 570px;
     padding: 0;
@@ -353,10 +326,10 @@
   }
 
   .example__scale-inner {
-    top: -14px;
-    left: 198px;
-    width: 34px;
-    height: 34px;
+    top: -12px;
+    left: 199px;
+    width: 33px;
+    height: 33px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border: 1px solid #cdcdcd;
     border-radius: 50%;
@@ -400,7 +373,6 @@
   }
 
   .example__info {
-    //width: 1220px;
     padding: 0;
     margin-bottom: 0;
   }
@@ -430,6 +402,7 @@
 
   .example__cost {
     width: 326px;
+    padding-top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

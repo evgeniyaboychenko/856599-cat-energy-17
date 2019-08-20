@@ -1,5 +1,9 @@
 .list-check__item {
   margin-bottom: 25px;
+
+  &--baa {
+    margin-bottom: 24px;
+  }
 }
 
 .list-check__label {
@@ -11,10 +15,10 @@
   &::before {
     position: absolute;
     content: "";
-    width: 29px;
-    height: 29px;
+    width: 28px;
+    height: 28px;
     top: 50%;
-    margin-top: -16px;
+    margin-top: -14px;
     left: 0;
     border: 1px solid #cdcdcd;
     border-radius: 50%;
@@ -35,7 +39,7 @@
   height: 12px;
   top: 50%;
   margin-top: -6px;
-  left: 10px;
+  left: 9px;
   background-color: #68b738;
   border-radius: 50%;
   opacity: 1;
@@ -70,19 +74,18 @@
 .list-check__input:hover + .list-check__label::before,
 .list-check__input:focus + .list-check__label::before {
   border-color: #bababa;
-  //border-color: red;
   opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
   .list-check__item {
     margin-bottom: 32px;
-  }
 
-  .list-check__item--baa {
-    width: 220px;
-    margin-left: 125px;
-    margin-bottom: 50px;
+    &--baa {
+      width: 220px;
+      margin-left: 125px;
+      margin-bottom: 50px;
+    }
   }
 
   .list-check__label {
@@ -100,7 +103,7 @@
     width: 18px;
     height: 18px;
     margin-top: -9px;
-    left: 12px;
+    left: 11px;
   }
 
   .list-check__input:checked + .list-check__label--checkbox::after {

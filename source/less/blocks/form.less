@@ -8,6 +8,39 @@
   margin: 0;
   margin-bottom: 29px;
   border: none;
+
+  &--wrapper-title {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &--contact {
+    margin-bottom: 15px;
+  }
+
+  &--comment {
+    margin-bottom: 27px;
+  }
+
+  &--baa {
+    margin-bottom: 17px;
+  }
+
+  &--border {
+    border-bottom: 1px solid @c-line;
+    border-top: 1px solid @c-line;
+  }
+
+  &--wrapper {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &--wrapper-profile {
+    margin-bottom: 22px;
+  }
 }
 
 .form__fieldset--line {
@@ -23,39 +56,6 @@
     left: 0;
     background-color: @btnc-green;
   }
-}
-
-.form__fieldset--wrapper-title {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.form__fieldset--contact {
-  margin-bottom: 15px;
-}
-
-.form__fieldset--comment {
-  margin-bottom: 27px;
-}
-
-.form__fieldset--baa {
-  margin-bottom: 13px;
-}
-
-.form__fieldset--border {
-  border-bottom: 1px solid @c-line;
-  border-top: 1px solid @c-line;
-}
-
-.form__fieldset--wrapper {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.form__fieldset--wrapper-profile {
-  margin-bottom: 22px;
 }
 
 .form__caption {
@@ -81,20 +81,20 @@
   font-weight: 400;
   color: @c-black;
   background-color: @c-white;
-}
 
-.form__title--contact {
-  width: 221px;
-}
+  &--contact {
+    width: 221px;
+  }
 
-.form__title--comment {
-  width: 162px;
-  margin-bottom: 35px;
-}
+  &--comment {
+    width: 162px;
+    margin-bottom: 35px;
+  }
 
-.form__title--baa {
-  width: 184px;
-  margin-bottom: 40px;
+  &--baa {
+    width: 184px;
+    margin-bottom: 40px;
+  }
 }
 
 .form__label {
@@ -105,19 +105,23 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-}
 
-.form__label--radio {
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+  &--radio {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
 
-.form__label--contact {
-  margin-right: 10px;
+  &--contact {
+    margin-right: 10px;
+  }
+
+  &--weight {
+    margin-right: 17px;
+  }
 }
 
 .form__textarea {
@@ -147,7 +151,7 @@
 
 .form__input {
   flex-grow: 1;
-  padding: 13px 16px;
+  padding: 13px 14px;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -169,6 +173,14 @@
   &:invalid {
     border: 2px solid #ff8282;
   }
+
+  &--tel {
+    padding-right: 35px;
+  }
+
+  &--mail {
+    padding-right: 35px;
+  }
 }
 
 .form__input:focus ~ .form__item--icon-mail,
@@ -188,38 +200,43 @@
 .form__input:invalid ~ .form__item--icon-phone {
   fill: #ff8282;
 }
-//
-//input[type="number"]::-webkit-inner-spin-button,
-//input[type="number"]::-webkit-outer-spin-button {
-//  -webkit-appearance: none;
-//  margin: 0;
-//}
-//
-//input[type="number"] {
-//  -moz-appearance: textfield;
-//}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
 
 .form__list {
   padding: 0;
   margin: 0;
   list-style: none;
+
+  &--radio {
+    width: 280px;
+    margin: 0 auto;
+    padding: 27px 20px;
+    padding-bottom: 0;
+  }
+
+  &--contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--baa {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form__fieldset--wrapper-radio {
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
-}
-
-.form__list--radio {
-  width: 280px;
-  margin: 0 auto;
-  padding: 27px 20px;
-  padding-bottom: 0;
-}
-
-.form__list--contact {
-  display: flex;
-  flex-direction: column;
 }
 
 .form__item {
@@ -228,39 +245,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.form__item--icon-mail {
-  position: absolute;
-  content: "";
-  width: 17px;
-  height: 13px;
-  top: 50%;
-  margin-top: -6px;
-  right: 16px;
-}
+  &--icon-mail {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 13px;
+    top: 50%;
+    margin-top: -6px;
+    right: 16px;
+  }
 
-.form__item--icon-phone {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  margin-top: -10px;
-  right: 13px;
-}
-
-.form__input--tel {
-  padding-right: 35px;
-}
-
-.form__input--mail {
-  padding-right: 35px;
-}
-
-.form__list--baa {
-  display: flex;
-  flex-direction: column;
+  &--icon-phone {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    right: 13px;
+  }
 }
 
 .form__button {
@@ -294,7 +298,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   .form__fieldset {
@@ -303,11 +307,50 @@
     &::before {
       top: 22px;
     }
-  }
 
-  .form__fieldset--wrapper-title {
-    width: 708px;
-    padding: 0 30px;
+    &--wrapper-title {
+      width: 708px;
+      padding: 0 30px;
+    }
+
+    &--wrapper {
+      width: 630px;
+      padding: 0 69px;
+    }
+
+    &--wrapper-profile {
+      margin-bottom: 71px;
+    }
+
+    &--wrapper-contact {
+      margin-bottom: 28px;
+    }
+
+    &--wrapper-comment {
+      margin-bottom: 0;
+    }
+
+    &--wrapper--baa {
+      margin-bottom: 0;
+    }
+
+    &--contact {
+      margin-bottom: 36px;
+    }
+
+    &--comment {
+      margin-bottom: 63px;
+    }
+
+    &--baa {
+      margin-bottom: 13px;
+    }
+
+    &--wrapper-radio {
+      width: 628px;
+      margin: 0 auto;
+      border: 1px solid #ededed;
+    }
   }
 
   .form__title {
@@ -315,59 +358,26 @@
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
-  }
 
-  .form__title--contact {
-    width: 594px;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+    &--contact {
+      width: 594px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
 
-  .form__title--comment {
-    width: 259px;
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-bottom: 75px;
-  }
+    &--comment {
+      width: 259px;
+      padding-right: 40px;
+      padding-left: 40px;
+      margin-bottom: 75px;
+    }
 
-  .form__title--baa {
-    width: 291px;
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-bottom: 67px;
-  }
-
-  .form__fieldset--wrapper {
-    width: 630px;
-    padding: 0 69px;
-  }
-
-  .form__fieldset--wrapper-profile {
-    margin-bottom: 71px;
-  }
-
-  .form__fieldset--wrapper-contact {
-    margin-bottom: 28px;
-  }
-
-  .form__fieldset--wrapper-comment {
-    margin-bottom: 0;
-  }
-
-  .form__fieldset--wrapper--baa {
-    margin-bottom: 0;
-  }
-
-  .form__fieldset--contact {
-    margin-bottom: 36px;
-  }
-
-  .form__fieldset--comment {
-    margin-bottom: 63px;
-  }
-
-  .form__fieldset--baa {
-    margin-bottom: 13px;
+    &--baa {
+      width: 291px;
+      padding-right: 40px;
+      padding-left: 40px;
+      margin-bottom: 67px;
+    }
   }
 
   .form__caption {
@@ -386,15 +396,21 @@
   }
 
   .form__label {
-    margin-right: 16px;
+    margin-right: 17px;
     font-size: 20px;
     line-height: 20px;
+
+    &--weight {
+      margin-right: 21px;
+    }
   }
 
   .form__input {
     font-size: 20px;
     line-height: 20px;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
   }
 
   .form__textarea {
@@ -408,13 +424,8 @@
     font-size: 16px;
   }
 
-  .form__fieldset--wrapper-radio {
-    width: 630px;
-    margin: 0 auto;
-    border: 1px solid #ededed;
-  }
-
   .form__list--radio {
+    width: auto;
     padding: 35px 28px;
     padding-bottom: 0;
     margin: 0;
@@ -445,7 +456,7 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    margin-bottom: 51px;
+    margin-bottom: 53px;
   }
 
   .form__fieldset--container {
@@ -514,10 +525,28 @@
     justify-content: space-between;
   }
 
+  .form__label {
+    &--contact {
+      margin-right: 21px;
+    }
+
+    &--tel {
+      margin-right: 14px;
+    }
+  }
+
   .form__item--mail,
   .form__item--tel {
     width: 570px;
     margin-bottom: 0;
+  }
+
+  .form__item--icon-mail {
+    right: 20px;
+  }
+
+  .form__item--icon-phone {
+    right: 20px;
   }
 
   .form__list--baa {

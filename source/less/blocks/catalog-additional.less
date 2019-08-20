@@ -9,7 +9,7 @@
     content: "";
     height: 3px;
     width: 100%;
-    top: 22px;
+    top: 14px;
     left: 0;
     background-color: @btnc-green;
   }
@@ -49,19 +49,16 @@
 
 .catalog-additional__item {
   border-top: 1px solid rgb(205, 205, 205);
-}
 
-.catalog-additional__item:last-child {
-  border-bottom: 1px solid rgb(205, 205, 205);
+  &:last-child {
+    border-bottom: 1px solid rgb(205, 205, 205);
+  }
 }
 
 .catalog-additional__all {
   border: none;
   margin-top: 39px;
-  //margin-bottom: 35px;
   min-height: 289px;
-  //padding-left: 55px;
-  //padding-right: 55px;
   background-color: @bc-green;
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-position: center;
@@ -72,41 +69,19 @@
     background-size: 280px auto;
   }
 }
-//--------------------------------------
-
-//.catalog-additional__title {
-//  display: flex;
-//  align-items: center;
-//}
-
-//.catalog-additional__title::before {
-//  content: "";
-//  margin-right: 24px;
-//  flex-grow: 1;
-//  flex-shrink: 0;
-//  width: 50px;
-//  height: 3px;
-//  background: @btnc-green;
-//}
-//
-//.catalog-additional__title::after {
-//  content: "";
-//  margin-left: 24px;
-//  flex-grow: 1;
-//  flex-shrink: 0;
-//  width: 50px;
-//  height: 3px;
-//  background: @btnc-green;
-//}
 
 @media (min-width: @tablet-width) {
   .catalog-additional {
-    margin-bottom: 76px;
-  }
+    margin-bottom: 75px;
 
-  .catalog-additional--wrapper-title {
-    width: 708px;
-    padding: 0 30px;
+    &::before {
+      top: 22px;
+    }
+
+    &--wrapper-title {
+      width: 708px;
+      padding: 0 30px;
+    }
   }
 
   .catalog-additional__title {
@@ -129,7 +104,8 @@
   }
 
   .catalog-additional__item {
-    padding: 27px 0;
+    padding-bottom: 27px;
+    padding-top: 26px;
     padding-left: 38px;
     padding-right: 36px;
     border: 1px solid rgba(205, 205, 205, 0.5);
@@ -155,18 +131,15 @@
 
 @media (min-width: @desktop-width) {
   .catalog-additional {
-    margin-bottom: 84px;
-  }
+    margin-bottom: 86px;
 
-  .catalog-additional--wrapper-title {
-    width: 1300px;
-    padding: 0;
+    &--wrapper-title {
+      width: 1300px;
+      padding: 0;
+    }
   }
 
   .catalog-additional__title {
-    //width: 1220px;
-    //padding: 0 40px;
-    //margin: 0 auto;
     margin-bottom: 80px;
   }
 
@@ -185,12 +158,11 @@
   .catalog-additional__item {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 15px;
-    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 15px;
     border: none;
     border-top: 1px solid rgb(205, 205, 205);
-    //justify-content: space-between;
-    //align-items: center;
+    align-items: center;
 
     &:last-child {
       border-bottom: 1px solid rgb(205, 205, 205);
