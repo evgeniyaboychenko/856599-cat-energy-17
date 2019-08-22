@@ -8,6 +8,7 @@
 
 .list-check__label {
   position: relative;
+  margin: 0;
   padding: 9px 0;
   padding-left: 46px;
   cursor: pointer;
@@ -65,16 +66,32 @@
   opacity: 1;
 }
 
-.list-check__input:active + .list-check__label::before,
-.list-check__input:active + .list-check__label::after,
-.list-check__input:active + .list-check__label {
-  opacity: 0.3;
+.list-check__label:hover::before {
+  border-color: #bababa;
+  opacity: 1;
 }
 
 .list-check__input:hover + .list-check__label::before,
 .list-check__input:focus + .list-check__label::before {
   border-color: #bababa;
   opacity: 1;
+}
+
+.list-check__label:active::before {
+  border-color: #bababa;
+  opacity: 0.3;
+}
+
+.list-check__input:active + .list-check__label::before,
+.list-check__input:active + .list-check__label::after,
+.list-check__input:active + .list-check__label {
+  border-color: #bababa;
+  opacity: 0.3;
+}
+
+
+.list-check__input:disabled + .list-check__label {
+  opacity: 0.2;
 }
 
 @media (min-width: @tablet-width) {

@@ -1,5 +1,8 @@
-.location__map {
+.location {
   position: relative;
+}
+
+.location__map {
   margin: 0 auto;
   margin-bottom: 39px;
   width: 320px;
@@ -29,6 +32,16 @@
     background-repeat: no-repeat;
     background-size: 64px auto;
   }
+}
+
+.location iframe {
+  position: absolute;
+  z-index: 20;
+  top: 117px;
+  left: 0;
+  width: 100%;
+  height: 362px;
+  border: none;
 }
 
 .location__contacts--background {
@@ -100,7 +113,7 @@
   .location__map {
     width: 768px;
     height: 396px;
-    margin-bottom: 52px;
+    margin-bottom: 57px;
     background-image: url("../../img/bg-map-tablet@1x.png");
 
     @media (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
@@ -115,6 +128,11 @@
       background-size: 124px auto;
     }
   }
+
+  .location iframe {
+    height: 396px;
+    top: 205px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -127,10 +145,14 @@
 
   .location__contacts {
     position: absolute;
-    z-index: 5;
+    z-index: 30;
     top: 93px;
     right: 50%;
     margin-right: 40px;
+
+    &--background {
+      background-color: transparent;
+    }
   }
 
   .location__wrapper {
@@ -150,7 +172,7 @@
   .location__map {
     width: 1440px;
     height: 400px;
-    margin-bottom: 54px;
+    margin-bottom: 58px;
     background-image: url("../../img/bg-map-desktop@1x.png");
     background-size: 1440px auto;
 
@@ -162,5 +184,10 @@
       margin-top: -50px;
       margin-left: 278px;
     }
+  }
+
+  .location iframe {
+    height: 400px;
+    top: 0;
   }
 }

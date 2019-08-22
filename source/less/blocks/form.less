@@ -151,6 +151,8 @@
 
 .form__input {
   flex-grow: 1;
+  height: 52px;
+  box-sizing: border-box;
   padding: 13px 14px;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
@@ -170,7 +172,7 @@
     border: 2px solid #444444;
   }
 
-  &:invalid {
+  &--required:invalid {
     border: 2px solid #ff8282;
   }
 

@@ -4,12 +4,8 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav--opened {
+  .main-nav--opened .main-nav__list {
     display: block;
-  }
-
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
   }
 
   .main-nav--opened .main-nav__toggle {
@@ -49,13 +45,20 @@
       cursor: pointer;
     }
   }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
     width: auto;
     border: none;
-    padding-top: 4px;
   }
 
   .main-nav__toggle {

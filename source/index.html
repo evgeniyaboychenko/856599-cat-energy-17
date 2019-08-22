@@ -17,7 +17,7 @@
             <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Кэт энерджи">
           </picture>
         </a>
-        <nav class="main-nav main-nav--closed">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button" aria-label="Раскрыть меню"></button>
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
@@ -41,6 +41,10 @@
           <h2 class="promo__title">Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Изображение питания для котов">
@@ -137,6 +141,8 @@
             </address>
           </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1886.4291305639554!2d30.320917073222716!3d59.93874517888179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560183366464!5m2!1sru!2sru" width="320" height="362" allowfullscreen>
+        </iframe>
         <div class="location__map" aria-label="Карта проезда до офиса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></div>
       </section>
 
@@ -175,8 +181,8 @@
             </ul>
           </div>
             <a class="links__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
-              <p class="links__developer-name">HTML Academy</p>
               <span class="visually-hidden">Логотип комапнии HTML Academy</span>
+              <p class="links__developer-name">HTML Academy</p>
               <svg class="links__developer-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="41">
                 <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
               </svg>
@@ -184,6 +190,8 @@
         </div>
       </section>
     </footer>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/script.js"></script>
   </body>
 </html>

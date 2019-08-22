@@ -12,7 +12,17 @@
   padding-bottom: 14px;
   display: block;
   line-height: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
+
+.page-header__logo-image:active {
+  opacity: 0.6;
+}
+
 
 .page-header__logo-image {
   width: 190px;
@@ -38,15 +48,6 @@
     margin-left: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
   }
 
   .page-header__logo-image {

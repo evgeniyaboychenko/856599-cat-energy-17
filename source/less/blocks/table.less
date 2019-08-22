@@ -1,0 +1,62 @@
+.table__row {
+  //width: 141px;
+  //display: flex;
+  //justify-content: space-between;
+}
+
+.table__column-first {
+  width: 50%;
+  text-align: left;
+}
+
+.table__column-second {
+  width: 50%;
+  text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .table__row {
+    border-bottom: 1px solid #cdcdcd;
+
+    &--additional {
+      border: none;
+    }
+  }
+
+  .table__column-first,
+  .table__column-second {
+    padding-bottom: 7px;
+    padding-top: 8px;
+  }
+
+  .table__column-first--additional {
+    width: auto;
+    text-align: right;
+  }
+
+  .table__column-second--additional {
+    width: 95px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card__table--additional {
+    padding-bottom: 7px;
+    padding-top: 13px;
+  }
+
+  .table__column-first--additional {
+    width: 210px;
+    text-align: left;
+    padding-bottom: 4px;
+    padding-top: 10px;
+  }
+
+  .table__column-second--additional {
+    width: 58px;
+    text-align: left;
+    margin-right: auto;
+    padding-bottom: 4px;
+    padding-top: 10px;
+  }
+}
