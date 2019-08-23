@@ -13,4 +13,30 @@
   vertical-align: middle;
   color: @c-white;
   background-color: @btnc-green;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+}
+
+.button--grey {
+  color: @c-grey;
+  background-color: @bc-grey;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #ebebeb;
+  }
 }

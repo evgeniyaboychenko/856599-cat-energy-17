@@ -33,14 +33,10 @@
   .site-list__item {
     border: none;
     margin-right: 36px;
-  }
 
-  .site-list__item:last-child {
-    margin-right: 0;
-  }
-
-  .site-list__current {
-    border-bottom: 2px solid @btnc-green;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .site-list__link {
@@ -49,6 +45,25 @@
     line-height: 24.8px;
     font-weight: 400;
     color: #222222;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .site-list__current {
+    border-bottom: 2px solid @btnc-green;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
@@ -66,11 +81,10 @@
   }
 
   .site-list__link {
-    //padding: 8px 0;
     font-size: 20px;
-  }
 
-  .site-list__link--background-cat {
-    color: @c-white;
+    &--background-cat {
+      color: @c-white;
+    }
   }
 }

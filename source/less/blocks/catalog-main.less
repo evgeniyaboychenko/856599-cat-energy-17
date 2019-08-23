@@ -3,7 +3,6 @@
 }
 
 .catalog-main__wrapper {
-  //width: 320px;
   margin: 0 auto;
   padding: 0;
 }
@@ -20,32 +19,32 @@
   box-sizing: border-box;
   padding: 0 20px;
   border-top: 1px solid @c-line;
+
+
+  &:last-child {
+    border-bottom: 1px solid @c-line;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &:last-child::after {
+    position: absolute;
+    content: "";
+    top: 26px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+  }
 }
 
-
-.catalog-main__item:last-child {
-  border-bottom: 1px solid @c-line;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.catalog-main__item:last-child::after {
-  position: absolute;
-  content: "";
-  top: 26px;
-  left: 50%;
-  margin-left: -15px;
-  width: 30px;
-  height: 30px;
-  background-image: url("../../img/icon-plus-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.2;
-
-  //color: rgba(34, 34, 34, 0.2);
-}
 //-----------------------------------------------------
 
 @media (min-width: @tablet-width) {
@@ -71,31 +70,31 @@
     margin-bottom: 140px;
     border: none;
     background-color: @bc-grey;
-  }
 
-  .catalog-main__item:last-child {
-    border: 1px solid @c-line;
-    background-color: white;
-    margin-bottom: 0;
-  }
+    &:last-child {
+      border: 1px solid @c-line;
+      background-color: white;
+      margin-bottom: 0;
+    }
 
-  .catalog-main__item:nth-last-child(2) {
-    margin-bottom: 0;
-  }
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
 
-  .catalog-main__item:last-child::after {
-    top: 55px;
-    left: 50%;
-    margin-left: -30px;
-    width: 60px;
-    height: 60px;
-    background-image: url("../../img/icon-plus.svg");
+    &:last-child::after {
+      top: 55px;
+      left: 50%;
+      margin-left: -30px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../img/icon-plus.svg");
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-main {
-    margin-bottom: 75px;
+    margin-bottom: 73px;
   }
 
   .catalog-main__wrapper {
@@ -110,10 +109,11 @@
   .catalog-main__item {
     width: 245px;
     margin-left: 80px;
-  }
+    margin-bottom: 142px;
 
-  .catalog-main__item:nth-last-child(3),
-  .catalog-main__item:nth-last-child(4) {
-    margin-bottom: 0;
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
+      margin-bottom: 0;
+    }
   }
 }
