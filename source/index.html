@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
@@ -119,11 +121,11 @@
               <div class="example__img--thin-cat" aria-label="Худой кот"></div>
             </div>
             <div class="example__scale">
-              <span class="example__scale-label">Было</span>
+              <span class="example__scale-label" tabindex="0">Было</span>
                 <div class="example__scale-full">
-                  <div class="example__scale-inner"></div>
+                  <div class="example__scale-inner" aria-label="Переключатель состояния кота" tabindex="0"></div>
                 </div>
-              <span class="example__scale-label">Стало</span>
+              <span class="example__scale-label" tabindex="0">Стало</span>
             </div>
           </div>
         </div>
@@ -141,7 +143,7 @@
             </address>
           </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1886.4291305639554!2d30.320917073222716!3d59.93874517888179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560183366464!5m2!1sru!2sru" width="320" height="362" allowfullscreen>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1886.4291305639554!2d30.320917073222716!3d59.93874517888179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560183366464!5m2!1sru!2sru" width="320" height="362" allowfullscreen="">
         </iframe>
         <div class="location__map" aria-label="Карта проезда до офиса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></div>
       </section>
@@ -165,7 +167,7 @@
               <li class="social__item">
                 <a class="social__link social__link--insta" href="#">
                   <span class="visually-hidden">Мы в инстаграмме</span>
-                  <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                     <use xlink:href="img/sprite.svg#icon-insta"></use>
                   </svg>
                 </a>
@@ -173,7 +175,7 @@
               <li class="social__item">
                 <a class="social__link social__link--fb" href="#">
                   <span class="visually-hidden">Мы в фейсбуке</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
                     <use xlink:href="img/sprite.svg#icon-fb"></use>
                   </svg>
                 </a>
@@ -192,6 +194,6 @@
     </footer>
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
