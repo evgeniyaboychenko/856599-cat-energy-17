@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-.catalog-additional--wrapper-title {
+.catalog-additional-wrapper-title {
   width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -70,6 +70,36 @@
   }
 }
 
+.catalog-additional__all-link {
+  position: relative;
+  width: 162px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 6px;
+  padding-top: 128px;
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: @c-white;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 60px;
+    top: 5px;
+    left: 50%;
+    margin-left: -27px;
+    background-image: url("../../img/gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .catalog-additional {
     margin-bottom: 75px;
@@ -77,11 +107,11 @@
     &::before {
       top: 22px;
     }
+  }
 
-    &--wrapper-title {
-      width: 708px;
-      padding: 0 30px;
-    }
+  .catalog-additional-wrapper-title {
+    width: 708px;
+    padding: 0 30px;
   }
 
   .catalog-additional__title {
@@ -127,16 +157,30 @@
       background-size: 708px auto;
     }
   }
+
+  .catalog-additional__all-link {
+    padding: 10px 0;
+    padding-left: 342px;
+    text-align: left;
+    margin-top: 61px;
+    margin-right: 123px;
+
+    &::after {
+      top: 4px;
+      left: 10px;
+      margin-left: 0;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-additional {
     margin-bottom: 86px;
+  }
 
-    &--wrapper-title {
-      width: 1300px;
-      padding: 0;
-    }
+  .catalog-additional-wrapper-title {
+    width: 1300px;
+    padding: 0;
   }
 
   .catalog-additional__title {
@@ -177,6 +221,21 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../../img/gift-photo-desktop@2x.jpg");
       background-size: 245px auto;
+    }
+  }
+
+  .catalog-additional__all-link {
+    width: 162px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 6px;
+    padding-top: 128px;
+    text-align: center;
+
+    &::after {
+      top: 5px;
+      left: 50%;
+      margin-left: -27px;
     }
   }
 }
