@@ -326,10 +326,11 @@
   }
 
   .example__scale-inner {
+    box-sizing: border-box;
     top: -12px;
     left: 199px;
-    width: 33px;
-    height: 33px;
+    width: 34px;
+    height: 34px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border: 1px solid #cdcdcd;
     border-radius: 50%;
@@ -348,8 +349,10 @@
     &::after {
       position: absolute;
       content: "";
-      top: 13px;
-      left: 13px;
+      top: 50%;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -4px;
       width: 8px;
       height: 8px;
       border-radius: 50%;
