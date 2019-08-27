@@ -97,36 +97,6 @@
   }
 }
 
-.card__link {
-  position: relative;
-  width: 162px;
-  margin: 0 auto;
-  margin-top: 60px;
-  padding: 6px;
-  padding-top: 128px;
-  display: block;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-align: center;
-  color: @c-white;
-  cursor: pointer;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 55px;
-    height: 60px;
-    top: 5px;
-    left: 50%;
-    margin-left: -27px;
-    background-image: url("../../img/gift.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
 @media (min-width: @tablet-width) {
   .card__wrapper {
     flex-direction: column;
@@ -164,26 +134,10 @@
     font-size: 16px;
   }
 
-  //.card__row {
-  //  border-bottom: 1px solid #cdcdcd;
-  //  padding-bottom: 7px;
-  //  padding-top: 6px;
-  //
-  //  &--additional {
-  //    justify-content: flex-end;
-  //    border: none;
-  //  }
-  //}
-
   .card__table--additional {
     width: 232px;
     margin-bottom: 16px;
   }
-
-  //.card__td {
-  //  width: 92px;
-  //  text-align: right;
-  //}
 
   .card__text {
     width: 180px;
@@ -216,20 +170,6 @@
       margin-bottom: 0;
     }
   }
-
-  .card__link {
-    padding: 10px 0;
-    padding-left: 342px;
-    text-align: left;
-    margin-top: 61px;
-    margin-right: 123px;
-
-    &::after {
-      top: 4px;
-      left: 10px;
-      margin-left: 0;
-    }
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -250,17 +190,6 @@
     width: 170px;
   }
 
-  //.card__row--additional {
-  //  padding-bottom: 7px;
-  //  padding-top: 13px;
-  //  justify-content: space-between;
-  //}
-
-  //.card__td {
-  //  width: 48px;
-  //  text-align: left;
-  //}
-
   .card__button {
     width: 169px;
 
@@ -274,20 +203,5 @@
     width: 314px;
     margin-bottom: 0;
     margin-right: 13px;
-  }
-
-  .card__link {
-    width: 162px;
-    margin: 0 auto;
-    margin-top: 60px;
-    padding: 6px;
-    padding-top: 128px;
-    text-align: center;
-
-    &::after {
-      top: 5px;
-      left: 50%;
-      margin-left: -27px;
-    }
   }
 }
